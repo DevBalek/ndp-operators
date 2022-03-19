@@ -1,4 +1,4 @@
-
+//FirstLine
 public class Deneme {
 	public int x;
 	public int y;
