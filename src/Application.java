@@ -10,26 +10,37 @@ public class Application {
 		
 	}
 	
-	static void readFile() {
+	public static void readFile() {
 		File myFile =new File("dist/Deneme.java");
 		Scanner myReader = null;
-				
 		
-		if(myFile.canRead()) {
-			
+
+		if(myFile.canRead()) {						
+				
 			try {
 				myReader = new Scanner(myFile);
-			} catch (FileNotFoundException e) {
+			} catch (FileNotFoundException e) {				
 				e.printStackTrace();
 			}
 			
-			while(myReader.hasNextLine()) {
-				String data = myReader.nextLine();
-				System.out.println(data);
-			}
-			
+			work(myReader);
 			
 		}
+	}
+
+	public static void work(Scanner myReader){
+		FlagHandler flagHandler = new FlagHandler();
+		ReduceService reduceService = new ReduceService();
+
+		while(myReader.hasNextLine()) {
+			String line = myReader.nextLine();
+			
+			//Kontrol Edilecek dosya
+			reduceService.reduceFile(line, flagHandler);
+			
+			System.out.println(line);
+		}
+
 	}
 	
 }

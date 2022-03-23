@@ -2,7 +2,7 @@
 public class CheckService {
 	
 	int indexOfFirstSlashStar(String line) {
-			return line.indexOf("/*");
+		return line.indexOf("/*");
 	}
 	
 	int indexOfFirstStarSlash(String line) {
@@ -13,4 +13,10 @@ public class CheckService {
 		return line.indexOf("//");
 	}
 
+	void handleComment(String line,Boolean isComment){
+		
+		
+
+	}
+		
 }
