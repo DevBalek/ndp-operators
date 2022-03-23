@@ -1,3 +1,4 @@
+
 public class FlagHandler {
     Boolean isComment = false;
     void swapFlag(){
