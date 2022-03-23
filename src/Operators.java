@@ -1,15 +1,19 @@
 import java.io.File;
 
 public class Operators {
+	int numericOperators;
+	int relationalOperators;
+	int logicalOperators;
 	
-	private File file;
 	
 	Operators(File file){
-		this.file = file;
+	 	numericOperators = 0;
+		relationalOperators = 0;
+		logicalOperators = 0;
 	}
 	
 	int numericOperators() {
-		file.canExecute();
+		
 		return 0;
 	}
 	

@@ -3,17 +3,19 @@ public class Deneme {
 	public int x;
 	public int y;
 	
-	public Deneme(int x,int y) {
+	public Deneme(int x,int y) { /* blaajsakdfl
+	*/
 		this.x = x;
 		this.y = y; 
 	}
+	// karahindiba /* aajslkdfkla
 	
 	/* *
 	* x*x + y*y // işlemi x > 0 ve y > 0
 	*/
 	
 	public int x2y2() {
-		return x * x + y * y;
+		return x * x + y * y; /*/ falandfkaj */
 	} 
 	
 	/*

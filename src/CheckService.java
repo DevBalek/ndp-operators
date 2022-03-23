@@ -12,11 +12,43 @@ public class CheckService {
 	int indexOfRowComment(String line) {
 		return line.indexOf("//");
 	}
-
-	void handleComment(String line,Boolean isComment){
-		
-		
-
-	}
-		
+			
 }
+
+/*
+
+	Sayısal Operator
+	+
+	++
+	-
+	--
+	*
+	/
+	%
+	&
+	|
+	^
+	=
+	+=
+	-=
+	/=
+	*=
+	%=
+	&=
+	|=
+	^=
+	
+	İlişkisel Operator
+	<
+	<=
+	>
+	>=
+	==
+	!=
+	
+	Mantıksal Operator
+	&&
+	||
+	!
+
+*/

@@ -4,17 +4,13 @@ import java.util.Scanner;
 
 public class Application {
 	public static void main(String[]args) {
-		//readFile();
-		
-		
-		
+		readFile();
 	}
 	
 	public static void readFile() {
 		File myFile =new File("dist/Deneme.java");
 		Scanner myReader = null;
 		
-
 		if(myFile.canRead()) {						
 				
 			try {
@@ -36,9 +32,9 @@ public class Application {
 			String line = myReader.nextLine();
 			
 			//Kontrol Edilecek dosya
-			reduceService.reduceFile(line, flagHandler);
+			String newLine = reduceService.reduceFile(line, flagHandler);
 			
-			System.out.println(line);
+			System.out.println(newLine);
 		}
 
 	}
