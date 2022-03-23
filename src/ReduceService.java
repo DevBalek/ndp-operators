@@ -9,7 +9,7 @@ public class ReduceService {
 		for (int i = 0; i < line.length(); i++) {
 			String a = "";
 			if(i!=line.length()-1)
-				a = String.valueOf(line.charAt(i)) +String.valueOf(line.charAt(i+1));
+				a = String.valueOf(line.charAt(i)) + String.valueOf(line.charAt(i+1));
 			else
 				a = String.valueOf(line.charAt(i));
 
