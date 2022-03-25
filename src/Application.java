@@ -22,11 +22,15 @@ public class Application {
 			Operators operators =new Operators();
 			work(myReader,flagHandler,operators);
 			
+			System.out.println("Operators: \n");
 			System.out.println("Single Operator: "+ operators.getSingleOperators() );
 			System.out.println("Couple Operator: "+ operators.getCoupleOperators() );
 			System.out.println("Numeric Operator: "+ operators.getNumericOperators() );
 			System.out.println("Relational Operator: "+ operators.getRelationalOperators() );
 			System.out.println("Logical Operator: "+ operators.getLogicalOperators() );
+			System.out.println("Operands: \n");
+			System.out.println("Sum of Operands: " + operators.getOperandInfo());
+			
 			
 		}
 	}
