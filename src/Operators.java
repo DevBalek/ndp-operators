@@ -29,24 +29,34 @@ public class Operators {
 			}else{
 				switch (a) {
 					case "+":
-						if (afterA.equals("+")||afterA.equals("=")) {
+						if (afterA.equals("+")) {
+							tracePrint = true;
+							increaseNumericOperators();		
+							increaseSingle();		
+						}else if(afterA.equals("=")){
 							tracePrint = true;
 							increaseNumericOperators();		
 							increaseCouple();				
-						}else{
+						}
+						else{
 							increaseNumericOperators();
-							increaseSingle();
+							increaseCouple();
 						}
 					break;
 
 					case "-":
-					if (afterA.equals("-")||afterA.equals("=")) {
+					if (afterA.equals("-")) {
+						tracePrint = true;
+						increaseNumericOperators();		
+						increaseSingle();				
+					}else if(afterA.equals("=")){
 						tracePrint = true;
 						increaseNumericOperators();		
 						increaseCouple();				
-					}else{
+					}
+					else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 					
@@ -57,7 +67,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
@@ -68,7 +78,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
@@ -79,7 +89,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 					
@@ -95,7 +105,7 @@ public class Operators {
 					}
 					else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
@@ -110,7 +120,7 @@ public class Operators {
 						increaseCouple();
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
@@ -121,7 +131,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 					
@@ -132,7 +142,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseNumericOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 					
@@ -143,7 +153,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseRelationalOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
@@ -154,7 +164,7 @@ public class Operators {
 						increaseCouple();				
 					}else{
 						increaseRelationalOperators();
-						increaseSingle();
+						increaseCouple();
 					}
 					break;
 
