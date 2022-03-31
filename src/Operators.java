@@ -2,19 +2,32 @@
 public class Operators {
 	private int singleOperators;
 	private int coupleOperators;
+
+	private int singleOperands;
+	private int coupleOperands;
+
 	private int numericOperators;
 	private int relationalOperators;
 	private int logicalOperators;
 	private int operandInfo;
 	
+
+
 	Operators(){
-		singleOperators=0;		
+		singleOperators=0;				
 		coupleOperators=0;
+
+		singleOperands=0;
+		coupleOperands=0;
+
+
 	 	numericOperators = 0;
 		relationalOperators = 0;
 		logicalOperators = 0;		
 	}
 	
+	
+
 	void controlLine(String line){
 		Boolean tracePrint = false;
 
@@ -30,34 +43,40 @@ public class Operators {
 			}else{
 				switch (a) {
 					case "+":
-						if (afterA.equals("+")) {
-							tracePrint = true;
-							increaseNumericOperators();		
-							increaseSingle();		
-						}else if(afterA.equals("=")){
-							tracePrint = true;
-							increaseNumericOperators();		
-							increaseCouple();				
-						}
-						else{
-							increaseNumericOperators();
-							increaseCouple();
-						}
+					if (afterA.equals("+")) {
+						tracePrint = true;
+						increaseNumericOperators();		
+						increaseSingle();
+						increaseSingleOperands();								
+					}else if(afterA.equals("=")){
+						tracePrint = true;
+						increaseNumericOperators();		
+						increaseCouple();		
+						increaseCoupleOperands();		
+					}
+					else{
+						increaseNumericOperators();
+						increaseCouple();
+						increaseCoupleOperands();
+					}
 					break;
 
 					case "-":
 					if (afterA.equals("-")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseSingle();				
+						increaseSingle();	
+						increaseSingleOperands();			
 					}else if(afterA.equals("=")){
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}
 					else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 					
@@ -65,10 +84,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();
+						increaseCoupleOperands();				
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -76,10 +97,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -87,10 +110,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 					
@@ -98,15 +123,18 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}else if(afterA.equals("&")){
 						tracePrint = true;
 						increaseLogicalOperators();
 						// increaseCouple();
+						increaseCoupleOperands();
 					}
 					else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -114,14 +142,17 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}else if (afterA.equals("|")){
 						tracePrint = true;
 						increaseLogicalOperators();
 						// increaseCouple();
+						increaseCoupleOperands();
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -129,10 +160,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseNumericOperators();		
-						increaseCouple();				
+						increaseCouple();		
+						increaseCoupleOperands();		
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 					
@@ -140,10 +173,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseRelationalOperators();
-						// increaseCouple();				
+						// increaseCouple();	
+						increaseCoupleOperands();			
 					}else{
 						increaseNumericOperators();
 						increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 					
@@ -151,10 +186,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseRelationalOperators();
-						// increaseCouple();				
+						// increaseCouple();	
+						increaseCoupleOperands();			
 					}else{
 						increaseRelationalOperators();
 						// increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -162,10 +199,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseRelationalOperators();
-						// increaseCouple();				
+						// increaseCouple();	
+						increaseCoupleOperands();			
 					}else{
 						increaseRelationalOperators();
 						// increaseCouple();
+						increaseCoupleOperands();
 					}
 					break;
 
@@ -173,10 +212,12 @@ public class Operators {
 					if (afterA.equals("=")) {
 						tracePrint = true;
 						increaseRelationalOperators();
-						// increaseCouple();				
+						// increaseCouple();	
+						increaseCoupleOperands();			
 					}else{
 						increaseLogicalOperators();
 						// increaseSingle();
+						increaseSingleOperands();
 					}
 					break;
 
@@ -185,16 +226,17 @@ public class Operators {
 				}
 			}
 
-			updateOperandInfo();
+			
 
 		}
+		
+		
+		updateOperandInfo();
 
 	}
 
 
-	void updateOperandInfo(){
-		setOperandInfo(((getCoupleOperators()+ 1) + getSingleOperators()));
-	}
+	void updateOperandInfo(){	setOperandInfo((2 * getCoupleOperands()) + getSingleOperands());	}
 	
 	private void increaseCouple(){	coupleOperators++;	}
 
@@ -205,6 +247,10 @@ public class Operators {
 	private void increaseRelationalOperators() {	relationalOperators++;	}
 	
 	private void increaseLogicalOperators() {	logicalOperators++;  }
+
+	private void increaseSingleOperands(){	singleOperands++;	}
+
+	private void increaseCoupleOperands(){	coupleOperands++; }
 
 	public int getCoupleOperators() {
 		return coupleOperators;
@@ -224,8 +270,26 @@ public class Operators {
 	public int getOperandInfo() {
 		return operandInfo;
 	}
+
+	public int getCoupleOperands() {
+		return coupleOperands;
+	}
+
+	public int getSingleOperands() {
+		return singleOperands;
+	}
+
+
 	public void setOperandInfo(int operandInfo) {
 		this.operandInfo = operandInfo;
+	}
+
+	public void setSingleOperands(int singleOperands) {
+		this.singleOperands = singleOperands;
+	}
+
+	public void setCoupleOperands(int coupleOperands) {
+		this.coupleOperands = coupleOperands;
 	}
 
 }

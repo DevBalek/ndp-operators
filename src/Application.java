@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Application {
 	public static void main(String[]args) {
 		calculateOperatorCount(new File("dist/Deneme.java"));		
+		//System.out.println("Arguments-> "+ args[0]);
 	}
 	
 	public static void calculateOperatorCount(File myFile) {		
@@ -29,6 +30,8 @@ public class Application {
 			System.out.println("Relational Operator: "+ operators.getRelationalOperators() );
 			System.out.println("Logical Operator: "+ operators.getLogicalOperators() );
 			System.out.println("Operands: \n");
+			System.out.println("Single Operands: " + operators.getSingleOperands());
+			System.out.println("Couple Operands: " + operators.getCoupleOperands());
 			System.out.println("Sum of Operands: " + operators.getOperandInfo());
 			
 			

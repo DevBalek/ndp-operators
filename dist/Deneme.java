@@ -1,5 +1,4 @@
-//FirstLine
-public class Deneme {
+public class Deneme { //yorum satiri
 	public int x;
 	public int y;
 	
