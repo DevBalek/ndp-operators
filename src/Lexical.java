@@ -1,5 +1,11 @@
+/** *
+* @author Muhammed Furkan Balek | G191210069 | muhammed.balek@ogr.sakarya.edu.tr | github.com/DevBalek 
+* @since March 2022
+* <p>
+	* Operatorlerle ilgili işlemleri yapan class
+* </p> */
 
-public class Operators {
+public class Lexical {
 	private int singleOperators;
 	private int coupleOperators;
 
@@ -13,7 +19,7 @@ public class Operators {
 	
 
 
-	Operators(){
+	Lexical(){
 		singleOperators=0;				
 		coupleOperators=0;
 

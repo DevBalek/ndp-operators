@@ -1,3 +1,9 @@
+/** *
+* @author Muhammed Furkan Balek | G191210069 | muhammed.balek@ogr.sakarya.edu.tr | github.com/DevBalek 
+* @since March 2022
+* <p>
+	* Yorum Satırlarını temizleme class'ı
+* </p> */
 
 public class ReduceService {	
 
